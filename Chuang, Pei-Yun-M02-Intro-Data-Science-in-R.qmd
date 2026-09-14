@@ -186,5 +186,6 @@ This module changed the way I think about data analysis. I now understand that a
 
 The required links will be added after the project is uploaded and published.
 
-- **GitHub Repository:** Link will be added here.
-- **GitHub Pages:** Link will be added here.
+- **GitHub Repository:** [View the GitHub Repository](https://github.com/candicechuang/M02-Quarto-Reflection)
+- **GitHub Pages:** [View the Published HTML Report](https://candicechuang.github.io/M02-Quarto-Reflection/)
+
