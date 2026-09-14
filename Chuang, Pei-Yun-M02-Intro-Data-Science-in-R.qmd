@@ -1,0 +1,190 @@
+---
+title: "M02 - Introduction to Data Science in R: Reflection"
+author: "Pei-Yun Chuang"
+date: today
+output-file: index.html
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 4
+    toc-expand: true
+    number-sections: true
+    code-link: true
+    code-fold: true
+    code-tools: true
+    code-overflow: wrap
+    embed-resources: true
+editor: visual
+execute:
+  freeze: auto
+---
+# Introduction
+
+This reflection summarizes what I learned about reproducible data science, literate coding, Quarto, R, and the Tidyverse ecosystem. It also explains how these tools may support my studies and future career in digital marketing.
+
+> Reproducible work is not only about getting a result. It is also about helping other people understand how the result was produced.
+
+::: {.callout-note}
+## Main Learning Goal
+
+My main goal is to connect data, code, explanations, and results in one organized and shareable document.
+:::
+
+# Reproducible Data Science and Literate Coding
+
+## Prompt 1
+
+**Summarize new things you learned in this module about reproducible data science and literate coding.**
+
+Before this module, I thought data analysis mainly meant using software to calculate results. I learned that reproducible data science requires much more. A researcher should organize the data, code, methods, explanations, and results so that another person can understand and repeat the analysis.
+
+I also learned about literate coding. Literate coding combines regular writing with computer code in the same document. Instead of keeping notes, code, and results in separate files, a person can use Quarto to connect everything. When the data or code changes, the report can be rendered again and the results can be updated consistently.
+
+The most important practices I learned include:
+
+1. Keeping files in a clear project folder.
+2. Using meaningful file names.
+3. Recording each step of the analysis.
+4. Keeping code close to its explanation.
+5. Sharing both the source file and the final report.
+6. Using version control to preserve changes.
+
+These practices can reduce mistakes and make teamwork easier. In digital marketing, reproducibility is useful because reports often need to be updated with new website, advertising, or customer data.
+
+# My Impression of Quarto
+
+## Prompt 2
+
+**Summarize the instructor's lecture about Quarto that you found impressive. Do you see yourself using Quarto every day for your job or study, like taking notes in your class or preparing a presentation?**
+
+The most impressive part of the instructor's Quarto lecture was seeing how one source file can produce a professional report. A QMD file can include headings, formatted text, links, tables, code, figures, citations, and other visual features. Quarto can then convert the content into HTML, PDF, Word, or presentation formats.
+
+I can see myself using Quarto for school and professional work. For school, I could use it to organize class notes, research summaries, and assignments. For my future digital marketing work, I could use it to prepare website traffic reports, campaign evaluations, and customer behavior analyses.
+
+For example, I may need to explain why website visitors leave a page or why customers add a product to their cart. Quarto would allow me to show the data, analysis process, visual results, and business recommendations in one document.
+
+::: {.callout-tip}
+## Practical Use
+
+Quarto could help me turn technical analysis into a report that managers, clients, and team members can understand.
+:::
+
+# The Reproducibility Crisis
+
+## Prompt 3
+
+**Summarize the video presentation about the reproducibility crisis. What do you think about the reproducibility crisis in your field? How can Quarto help address the concerns you have about reproducibility in the line of your work?**
+
+The video explained that a reproducibility crisis happens when researchers or analysts cannot repeat a study and obtain the same or similar results. This problem may happen because the original data is unavailable, the methods are unclear, important steps are missing, or the code is not shared. Selective reporting and human error can also reduce trust in research findings.
+
+I think this concern is important in marketing. Marketing professionals may use different definitions, filters, attribution models, or date ranges when analyzing the same campaign. As a result, two people may report different conversion rates or different returns on advertising spending. If the process is not documented, it can be difficult to explain why the results are different.
+
+Quarto can help because it places the explanation, code, and output together. It creates a visible record of the analytical process. Team members can review the assumptions and rerun the report when new data becomes available. GitHub can also record changes over time.
+
+Reproducibility does not automatically guarantee that a conclusion is correct, but it makes the process more transparent and easier to evaluate.[^1]
+
+[^1]: Reproducibility means that the analytical process can be repeated using the same data and methods.
+
+# The Tidyverse Ecosystem and R
+
+## Prompt 4
+
+**Summarize what you learned in this module about the Tidyverse ecosystem in R. What can you do with R?**
+
+The Tidyverse is a collection of R packages designed to work together. It provides consistent tools for importing, cleaning, transforming, visualizing, and communicating data. Instead of using unrelated commands for every task, the packages follow similar principles and make the workflow easier to understand.
+
+Some important Tidyverse packages are shown in @tbl-tidyverse.
+
+| Package | Main Purpose | Marketing Example |
+|---|---|---|
+| `readr` | Import data | Read campaign data from a CSV file |
+| `dplyr` | Transform data | Filter customers and calculate conversion rates |
+| `tidyr` | Reshape data | Organize data into a tidy structure |
+| `ggplot2` | Visualize data | Create charts of traffic or sales trends |
+| `stringr` | Work with text | Clean campaign names or search terms |
+
+: Selected Tidyverse packages and marketing applications {#tbl-tidyverse}
+
+With R, I can clean large datasets, combine information from different sources, calculate statistics, create visualizations, build predictive models, and prepare automated reports. These abilities can support decisions about customers, websites, products, and advertising campaigns.
+
+The following is a simple example of a Tidyverse workflow. The code is included for learning purposes and is not executed in this reflection.
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: "Show example R code"
+
+library(tidyverse)
+
+campaign_data |>
+  filter(device == "mobile") |>
+  group_by(channel) |>
+  summarize(
+    average_conversion_rate = mean(conversion_rate, na.rm = TRUE)
+  )
+```
+
+# Two Additional R Packages
+
+## Prompt 5
+
+**Refer to the video introducing the top R packages. Among the various packages introduced, choose two packages beyond the Tidyverse ecosystem, base R, and Quarto that could enhance your job or career. Tell me why you think so.**
+
+I would choose **Shiny** and **tidymodels** because they could support my future work in digital marketing and business analysis.
+
+::: {.panel-tabset}
+
+## Shiny
+
+Shiny can be used to create interactive web applications and dashboards with R. A Shiny dashboard could allow managers to select a date range, campaign, device, or customer group and immediately see updated results.
+
+This would be useful when presenting Google Analytics or advertising data. Instead of sending many static reports, I could create one interactive tool that allows a team to explore the information.
+
+## tidymodels
+
+Tidymodels provides an organized framework for machine learning and predictive modeling in R. It can help prepare data, train models, compare performance, and evaluate predictions.
+
+In marketing, I could use it to predict customer purchases, identify customers who may stop buying, or study which website behaviors are connected to adding a product to the cart.
+
+:::
+
+As summarized in @tbl-career, the two packages support different but complementary career skills.
+
+| Package | Skill Developed | Possible Career Use |
+|---|---|---|
+| Shiny | Interactive communication | Marketing dashboards |
+| tidymodels | Predictive analytics | Customer behavior prediction |
+
+: Additional R packages for my career {#tbl-career}
+
+# R Versus Python
+
+## Prompt 6
+
+**Refer to the debate on R vs. Python. What is your take on this debate? In your response, consider how Quarto enables people using R and Python in the same team to still collaborate.**
+
+I do not think R and Python should always be treated as competitors. Both languages are useful, but they have different strengths. R is especially strong for statistics, data visualization, research, and reporting. Python is widely used for general programming, automation, machine learning, and software development.
+
+The best choice depends on the task, the team, and the existing workflow. For my current studies, R is helpful because it provides strong tools for data analysis and makes it possible to create a complete report with Quarto. However, learning basic Python could also help me work with larger technical teams in the future.
+
+Quarto makes the debate less important because it supports both R and Python. Team members can use the language that fits their skills while still contributing to the same type of report. A person using R can focus on statistical analysis, while a person using Python can work on data processing or machine learning. Their explanations, code, and results can still be organized and shared through Quarto.
+
+My conclusion is that collaboration and reproducibility are more important than choosing one language as the winner.
+
+::: {.callout-important}
+## Final Takeaway
+
+R and Python are tools. The most important goal is to create accurate, transparent, understandable, and useful work.
+:::
+
+# Conclusion
+
+This module changed the way I think about data analysis. I now understand that a good analysis should be reproducible, clearly explained, and easy to share. Quarto connects writing, code, data, and results, while R and the Tidyverse provide tools for working with data. These skills can help me complete academic projects and prepare professional digital marketing reports.
+
+# Appendix
+
+The required links will be added after the project is uploaded and published.
+
+- **GitHub Repository:** Link will be added here.
+- **GitHub Pages:** Link will be added here.
